@@ -14,34 +14,89 @@
   body {
     background: #0d0d15;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 30px;
   }
 
-  .container {
-    max-width: 700px;
-    width: 100%;
-  }
-
-  .section-atas {
-    background: linear-gradient(135deg, #14141f, #1c1c2e);
-    border-radius: 24px;
-    padding: 40px;
+  header {
+    background: linear-gradient(90deg, #7b5cff, #a78bfa);
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: munculAtas 0.8s ease forwards;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  @keyframes munculAtas {
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: background 0.3s ease;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.4);
+  }
+
+  main {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  article {
+    flex: 2;
+    min-width: 260px;
+    background: linear-gradient(135deg, #14141f, #1c1c2e);
+    border-radius: 24px;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: muncul 0.7s ease forwards;
+  }
+
+  aside {
+    flex: 1;
+    min-width: 180px;
+    background: linear-gradient(160deg, #6ee7e0, #7b5cff);
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: muncul 0.7s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes muncul {
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  aside img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  aside img:hover {
+    transform: scale(1.05);
   }
 
   .badge {
@@ -49,121 +104,29 @@
     background: linear-gradient(90deg, #7b5cff, #a78bfa);
     color: #fff;
     font-weight: bold;
-    padding: 10px 24px;
+    padding: 8px 20px;
     border-radius: 30px;
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
   }
 
-  .info-kiri h1 {
-    color: #fff;
-    font-size: 15px;
+  article h2 {
+    color: #a78bfa;
+    font-size: 16px;
     margin-bottom: 10px;
   }
 
-  .info-kiri p {
-    color: #aaa;
-    font-size: 13px;
-    line-height: 1.6;
-    max-width: 260px;
-  }
-
-  .info-kiri .nama {
-    color: #a78bfa;
-    font-weight: bold;
-  }
-
-  .foto-wrap {
-    width: 200px;
-    height: 240px;
-    border-radius: 30px;
-    overflow: hidden;
-    background: linear-gradient(160deg, #6ee7e0, #7b5cff);
-    flex-shrink: 0;
-    transition: transform 0.4s ease;
-  }
-
-  .foto-wrap:hover {
-    transform: scale(1.04) rotate(-1deg);
-  }
-
-  .foto-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.9;
-  }
-
-  .contact {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    opacity: 0;
-    animation: munculTeks 0.7s ease forwards;
-    animation-delay: 0.5s;
-  }
-
-  @keyframes munculTeks {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .contact-item {
+  article p, article li {
     color: #ccc;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-  }
-
-  .contact-item:hover {
-    color: #a78bfa;
-  }
-
-  .contact-item span {
-    color: #7b5cff;
-    font-weight: bold;
-  }
-
-  .section-bawah {
-    background: linear-gradient(135deg, #7b5cff, #5b3fd6);
-    border-radius: 24px;
-    padding: 40px;
-    margin-top: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: munculBawah 0.8s ease forwards;
-    animation-delay: 0.3s;
-  }
-
-  @keyframes munculBawah {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .bawah-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  .bawah-grid h2 {
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 14px;
-  }
-
-  .bawah-grid p, .bawah-grid li {
-    color: #e5e0ff;
     font-size: 13px;
     line-height: 1.7;
     list-style: none;
+    margin-bottom: 6px;
   }
 
   .tag {
     display: inline-block;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.1);
     padding: 5px 12px;
     border-radius: 20px;
     margin: 4px 4px 0 0;
@@ -173,56 +136,49 @@
   }
 
   .tag:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.25);
   }
 
-  .item {
-    opacity: 0;
-    animation: munculTeks 0.6s ease forwards;
+  footer {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    margin-top: 30px;
   }
-
-  .item:nth-child(1) { animation-delay: 0.6s; }
-  .item:nth-child(2) { animation-delay: 0.75s; }
 </style>
 </head>
 <body>
 
-<div class="container">
+<header>
+  <h1>Biodata Mahasiswa</h1>
+  <nav>
+    <a href="https://www.dicoding.com/users/hasya_putri_anika/academies" target="_blank">Profil Dicoding Saya</a>
+  </nav>
+</header>
 
-  <div class="section-atas">
-    <div class="info-kiri">
-      <div class="badge">Tentang Saya</div>
-      <h1>Nama saya <span class="nama">Hasya Putri Anika</span></h1>
-      <p>Saya mahasiswa Sistem Informasi yang senang mempelajari hal baru di dunia teknologi, khususnya pengembangan web. Di luar akademik, saya juga rutin nge-gym untuk menjaga kebugaran sekaligus melatih fokus dan disiplin.</p>
+<main>
+  <article>
+    <div class="badge">Tentang Saya</div>
+    <h2>Hasya Putri Anika</h2>
+    <p>NIM: 2513030037</p>
+    <p>Kediri, 20 Agustus 2006</p>
+    <p>Jl. Teuku Umar No. 46</p>
+    <p style="margin-top:12px;">Saya mahasiswa Sistem Informasi yang senang mempelajari hal baru di dunia teknologi, khususnya pengembangan web. Di luar akademik, saya rutin nge-gym untuk menjaga kebugaran sekaligus melatih fokus dan disiplin.</p>
+    <div style="margin-top:12px;">
+      <span class="tag">Gym</span>
+      <span class="tag">Teknologi</span>
+      <span class="tag">Web Development</span>
     </div>
-    <div class="foto-wrap">
-      <img src="FOTO ASYA.jpeg" alt="Foto Profil">
-    </div>
-  </div>
+  </article>
 
-  <div class="contact">
-    <div class="contact-item"><span>#</span> NIM: 2513030037</div>
-    <div class="contact-item"><span>#</span> Kediri, 20 Agustus 2006</div>
-    <div class="contact-item"><span>#</span> Jl. Teuku Umar No. 46</div>
-    <div class="contact-item"><span>#</span> Sistem Informasi</div>
-  </div>
+  <aside>
+    <img src="FOTO ASYA (1).png" alt="Foto Profil">
+  </aside>
+</main>
 
-  <div class="section-bawah">
-    <div class="bawah-grid">
-      <div class="item">
-        <h2>Pendidikan</h2>
-        <p>Universitas Nusantara PGRI Kediri<br>Sistem Informasi (2025 - Sekarang)</p>
-      </div>
-      <div class="item">
-        <h2>Hobi & Minat</h2>
-        <span class="tag">Gym</span>
-        <span class="tag">Teknologi</span>
-        <span class="tag">FOOD & BEVERAGE</span>
-      </div>
-    </div>
-  </div>
-
-</div>
+<footer>
+  <p>&copy; 2026 Hasya Putri Anika</p>
+</footer>
 
 </body>
 </html>
