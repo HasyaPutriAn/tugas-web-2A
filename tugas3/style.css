@@ -1,0 +1,15 @@
+/* untuk H1 warna merah dan ukuran font 30px */
+h1 {
+    color: red;
+    font-size: 30px;
+}   
+/* untuk H2 warna biru dan ukuran font 25px */
+h2 {
+    color: blue;
+    font-size: 25px;
+}  
+/* untuk p warna hijau dan ukuran font 10px */
+p {
+    color: green;
+    font-size: 10px;
+}
