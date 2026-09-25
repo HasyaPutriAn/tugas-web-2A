@@ -1,4 +1,4 @@
-/* membuat body bewarna abu abu dan font bertipe arial dan san serif ukuran 16px */  
+/* membuat body bewarna abu abu dan font bertipe arial dan sans serif ukuran 16px */
 body {
     background-color: gray;
     font-family: Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-/* nenbuat canvas putih ditengah */
+/* membuat canvas putih ditengah */
 .container {
     background-color: white;
     margin: 0 auto;
@@ -20,7 +20,7 @@ body {
     padding-left: 20px;
 }
 
-mengatur judul
+/* mengatur judul */
 .header .judul{
     font-size: 40px;
     font-weight: bold;
@@ -33,7 +33,7 @@ mengatur judul
     padding: 0px;
 }
 .nav li {
-    /* membuat list navigasi menjadi horizontal dan mengatur jarakk antar menu */
+    /* membuat list navigasi menjadi horizontal dan mengatur jarak antar menu */
     display: inline-block;
     margin-right: 10px;
     margin-top: 20px;
@@ -50,4 +50,59 @@ mengatur judul
 .nav li a:hover {
     background-color: blue;
     color: white;
+}
+
+/* untuk banner */
+.banner {
+    height: 300px;
+    /* warna cadangan kalau gambar belum ada */
+    background-color: skyblue;
+    /* memasukkan gambar banner dari folder img */
+    background-image: url(../img/FOTO\ ASYA.jpeg);
+    /* mengatur ukuran gambar agar memenuhi banner */
+    background-size: cover;
+    /* mengatur posisi gambar secara horizontal dan vertikal */
+    background-position: 0px -150px;
+    /* membuat garis tepi atas dan bawah banner */
+    border-top: 5px solid navy;
+    border-bottom: 5px solid skyblue;
+}
+
+/* untuk isi artikel */
+.isi {
+    padding: 20px;
+}
+
+.isi h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.isi .penulis {
+    font-size: 14px;
+    /* agar posisinya agak naik mendekati judul */
+    margin-top: -10px;
+}
+
+.isi .penulis a {
+    text-decoration: none;
+    color: skyblue;
+}
+
+.isi p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* untuk footer */
+.footer {
+    background-color: navy;
+    height: 50px;
+    padding: 2px;
+}
+
+.footer .copyright {
+    font-size: 16px;
+    color: white;
+    text-align: center;
 }
