@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kasir</h1>
+
+    <script type="text/javascript">
+        let nama = prompt("Masukkan nama barang:");
+        let harga = parseFloat(prompt("Masukkan harga barang:"));
+        let qty = parseFloat(prompt("Masukkan jumlah beli (qty):"));
+
+        // MENGHITUNG TOTAL BELANJA
+        let totalBelanja = harga * qty;
+        document.write("Nama Barang: " + nama + "<br>");
+        document.write("Harga Barang: " + harga + "<br>");
+        document.write("Jumlah Beli: " + qty + "<br>");
+        document.write("Total Belanja: " + totalBelanja + "<br>");
+
+        // CEK DISKON
+        let diskon = 0;
+        if (totalBelanja > 50000) {
+            diskon = totalBelanja * 0.1;
+        }
+        document.write("Diskon: " + diskon + "<br>");
+
+        // MENGHITUNG PEMBAYARAN
+        let pembayaran = totalBelanja - diskon;
+        document.write("Pembayaran: " + pembayaran + "<br>");
+
+    </script>
+    
+</body>
+</html>
