@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar DOM</title>
+</head>
+<body>
+  <h1 id="judul">Belajar DOM</h1>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita rem ipsam quas, voluptate deserunt natus illum asperiores amet id ab reiciendis unde facere? Quam deleniti saepe eaque, veniam sunt quo.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex qui possimus placeat atque tenetur nulla dolor cum accusamus? Fugit magni commodi qui nobis eveniet iure sequi facere magnam ex?</p>
+
+  <h3 class="daftar">Daftar Negara</h3>
+  <ul>
+    <li>Argentina</li>
+    <li>Amerika</li>
+    <li>India</li>
+    <li>Indonesia</li>
+    <li>Belanda</li>
+  </ul>
+
+  <script>
+    // pilih berdasarkan id
+    let judul = document.getElementById('judul');
+    console.log(judul);
+
+    // pilih semua elemen p
+    let semuaP = document.getElementsByTagName('p');
+    console.log(semuaP);
+
+    // pilih berdasarkan class
+    let daftar = document.getElementsByClassName('daftar');
+    console.log(daftar);
+
+    // pilih satu elemen pakai pola CSS
+    let title = document.querySelector('#judul');
+    console.log(title);
+
+    // pilih semua elemen li
+    let list = document.querySelectorAll('li');
+    console.log(list);
+  </script>
+</body>
+</html>
